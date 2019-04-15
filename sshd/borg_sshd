@@ -1,0 +1,27 @@
+# Alternate sshd for borg use only, to be run aside a normal sshd process
+Port 2222
+Protocol 2
+SyslogFacility AUTHPRIV
+PermitRootLogin no
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials yes
+UsePAM yes
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+AcceptEnv XMODIFIERS
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+PrintMotd no
+PrintLastLog no
+PermitUserEnvironment no
+ClientAliveInterval 10
+ClientAliveCountMax 3
+UseDNS no
+PidFile /var/run/sshd_backups.pid
+MaxStartups 100:60:200
+DenyUsers root
+ForceCommand /usr/local/scripts/borg-restricted.sh

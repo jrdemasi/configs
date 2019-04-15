@@ -6,9 +6,11 @@ css=/cgit.css
 logo=/cgit.png
 
 
-enable-index-owner=1
+enable-index-owner=0
 # Allow http transport git clone
-enable-http-clone=0
+enable-http-clone=1
+#enable-git-clone=1
+clone-url=https://git.jthan.io/$CGIT_REPO_URL
 
 
 # if you do not want that webcrawler (like google) index your site
@@ -20,7 +22,7 @@ virtual-root=/
 remove-suffix=1
 
 project-list=/var/lib/gitolite/projects.list
-snapshots=tar.gz tar.bz2
+snapshots=all
 remove-suffix=1
 enable-blame=1
 enable-git-config=1

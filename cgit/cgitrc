@@ -5,14 +5,8 @@
 css=/cgit.css
 logo=/cgit.png
 
-# Following lines work with the above Apache config
-#css=/cgit-css/cgit.css
-#logo=/cgit-css/cgit.png
 
-# Following lines work with the above Lighttpd config
-#css=/cgit/cgit.css
-#logo=/cgit/cgit.png
-
+enable-index-owner=1
 # Allow http transport git clone
 enable-http-clone=0
 
@@ -28,12 +22,13 @@ remove-suffix=1
 project-list=/var/lib/gitolite/projects.list
 snapshots=tar.gz tar.bz2
 remove-suffix=1
-enable-index-owner=0
 enable-blame=1
+enable-git-config=1
 
-scan-path=/var/lib/gitolite/repositories
 
-source-filter=/usr/lib/cgit/filters/syntax-highlighting.sh
+
+#source-filter=/usr/lib/cgit/filters/syntax-highlighting.sh
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
 # Set title and description
 root-title=jthan.io::git
 root-desc=A smattering of stuff and things
@@ -81,5 +76,4 @@ enable-log-filecount=1
 # Show number of added/removed lines per commit on the log pages
 enable-log-linecount=1
 
-# Allow using gitweb.* keys
-enable-git-config=1
+scan-path=/var/lib/gitolite/repositories

@@ -1,0 +1,10 @@
+[options]
+font = Monospace 18
+scrollback_lines = 15000
+allow_bold = true
+clickable_url = true
+mouse_autohide = true
+
+[colors]
+background = rgba(50,50,50,.65)
+

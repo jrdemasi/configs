@@ -196,6 +196,8 @@ bindsym $mod+space exec dmenu_run -i -l 5
 # Screen Lock
 bindsym $mod+x exec i3lock -n --color 475263
 exec --no-startup-id xss-lock -- i3lock -n --color 475263
+exec --no-startup-id dunst
+exec --no-startup-id xset b off
 
 # Background
 exec_always --no-startup-id feh --bg-scale /home/jonathan/.background.png
